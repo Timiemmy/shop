@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     "ecom",
     "cart",
+    "orders",
 ]
 
 MIDDLEWARE = [
