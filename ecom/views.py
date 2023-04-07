@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-# from cart.forms import CartAddProductForm
+from cart.forms import CartAddProductForm
 from .models import Category, Product
 
 
@@ -22,8 +22,7 @@ def product_detail(request, id, slug):
                                 id=id,
                                 slug=slug,
                                 available=True)  # This expects the id and slug parameters in order to retrieve the Product instance
-   # cart_product_form = CartAddProductForm()
+    cart_product_form = CartAddProductForm()
     return render(request,
                   'ecom/product/detail.html',
-                  {'product': product, })
-    # 'cart_product_form': cart_product_form})
+                  {'product': product, 'cart_product_form': cart_product_form})
